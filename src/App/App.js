@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
 import React, { Component } from 'react';
+import firebase from 'firebase/app';
+import 'firebase/auth';
 
 import connection from '../helpers/data/connection';
 
@@ -18,8 +20,25 @@ class App extends Component {
 
   componentDidMount() {
     connection();
+    // only happens when you refresh the page
+    this.removeListener = firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.setState({
+          authed: true,
+        });
+      } else {
+        this.setState({
+          authed: false,
+        });
+      }
+    });
   }
 
+  componentWillUnmount() {
+    this.removeListener();
+  }
+
+  // might get away with taking this out because defined above
   isAuthenticated = () => {
     this.setState({ authed: true });
   }
