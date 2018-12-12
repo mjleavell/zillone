@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { Component } from 'react';
 
 import connection from '../helpers/data/connection';
@@ -7,6 +8,7 @@ import Listings from '../components/Listings/Listings';
 import MyNavbar from '../components/MyNavbar/MyNavbar';
 
 import './App.scss';
+import authRequests from '../helpers/data/authRequests';
 
 class App extends Component {
   // defining the initial state in THIS component
@@ -23,17 +25,22 @@ class App extends Component {
   }
 
   render() {
+    const logoutClickEvent = () => {
+      authRequests.logoutUser();
+      this.setState({ authed: false });
+    };
+
     if (!this.state.authed) { // if this.state.authed is false then
       return (
         <div className="App">
-          <MyNavbar />
+          <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent}/> {/* logout doesnt need this becasue inside render */}
           <Auth isAuthenticated={this.isAuthenticated}/>
         </div>
       );
     }
     return (
       <div className="App">
-        <MyNavbar />
+        <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent}/>
         <Listings />
       </div>
     );
