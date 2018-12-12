@@ -14,8 +14,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* self closing div */}
-        <Auth />
+        <Auth /> {/* self closing div */}
       </div>
     );
   }
