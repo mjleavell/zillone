@@ -7,6 +7,7 @@ class Auth extends React.Component {
   authenticateUser = (e) => {
     e.preventDefault(); // need to have prevent default on all events to prevent bubbling up
     authRequests.authenticate().then(() => {
+      this.props.isAuthenticated();
     }).catch(err => console.error('auth', err));
   }
 
