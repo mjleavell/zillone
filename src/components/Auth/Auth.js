@@ -1,9 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import authRequests from '../../helpers/data/authRequests';
 import './Auth.scss';
 
 // component is a method on react itself
 class Auth extends React.Component {
+  static propTypes = {
+    isAuthenticated: PropTypes.func,
+  }
+
   authenticateUser = (e) => {
     e.preventDefault(); // need to have prevent default on all events to prevent bubbling up
     authRequests.authenticate().then(() => {
