@@ -44,9 +44,19 @@ class App extends Component {
     this.removeListener();
   }
 
-  // might get away with taking this out because defined above
   isAuthenticated = () => {
     this.setState({ authed: true });
+  }
+
+  deleteOne = (listingId) => {
+    listingRequests.deleteListing(listingId)
+      .then(() => {
+        listingRequests.getRequest()
+          .then((listings) => {
+            this.setState({ listings });
+          });
+      })
+      .catch(err => console.error('deteleOne error', err));
   }
 
   render() {
@@ -69,7 +79,10 @@ class App extends Component {
       <div className="App">
         <MyNavbar isAuthed={this.state.authed} logoutClickEvent={logoutClickEvent}/>
         <div className="row">
-          <Listings listings={this.state.listings} />
+          <Listings
+            listings={this.state.listings}
+            deleteSingleListing={this.deleteOne}
+          />
           <Building />
         </div>
         <div className="row">
