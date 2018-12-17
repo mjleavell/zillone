@@ -10,7 +10,7 @@ import MyNavbar from '../components/MyNavbar/MyNavbar';
 import Listings from '../components/Listings/Listings';
 import Building from '../components/Building/Building';
 import ListingForm from '../components/ListingForm/ListingForm';
-import listingRequest from '../helpers/data/listingsRequests';
+import listingRequests from '../helpers/data/listingsRequests';
 import './App.scss';
 import authRequests from '../helpers/data/authRequests';
 
@@ -22,7 +22,7 @@ class App extends Component {
 
   componentDidMount() {
     connection();
-    listingRequest.getRequest().then((listings) => {
+    listingRequests.getRequest().then((listings) => {
       this.setState({ listings });
     })
       .catch(err => console.error('error with listing GET', err));
