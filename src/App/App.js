@@ -23,6 +23,7 @@ class App extends Component {
   componentDidMount() {
     connection();
     listingRequests.getRequest().then((listings) => {
+      // setting the state here causes the dom to refresh
       this.setState({ listings });
     })
       .catch(err => console.error('error with listing GET', err));
@@ -48,6 +49,7 @@ class App extends Component {
     this.setState({ authed: true });
   }
 
+  // delete is a method on the component(App) that is a react component so dont need const
   deleteOne = (listingId) => {
     listingRequests.deleteListing(listingId)
       .then(() => {

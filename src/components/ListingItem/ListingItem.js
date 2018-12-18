@@ -25,7 +25,7 @@ class ListingItem extends React.Component {
       if (listing.uid === uid) {
         return (
           <div>
-            <span className="col">
+            <span className="col-2">
               <button className="btn btn-default" onClick={this.deleteEvent}>
                 <i className="fas fa-trash-alt"></i>
               </button>
