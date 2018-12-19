@@ -9,12 +9,19 @@ class ListingItem extends React.Component {
   static propTypes = {
     listing: listingShape,
     deleteSingleListing: PropTypes.func,
+    passListingToEdit: PropTypes.func,
   }
 
   deleteEvent = (e) => {
     e.preventDefault();
     const { deleteSingleListing, listing } = this.props;
     deleteSingleListing(listing.id);
+  }
+
+  editEvent = (e) => {
+    e.preventDefault();
+    const { passListingToEdit, listing } = this.props;
+    passListingToEdit(listing.id);
   }
 
   render() {
@@ -25,7 +32,12 @@ class ListingItem extends React.Component {
       if (listing.uid === uid) {
         return (
           <div>
-            <span className="col-2">
+            <span className="col">
+              <button className="btn btn-default" onClick={this.editEvent}>
+                <i className="fas fa-pencil-alt"></i>
+              </button>
+            </span>
+            <span className="col">
               <button className="btn btn-default" onClick={this.deleteEvent}>
                 <i className="fas fa-trash-alt"></i>
               </button>
@@ -37,7 +49,7 @@ class ListingItem extends React.Component {
     };
 
     return (
-      <li className="listing-item text-center">
+      <li className="listing-item">
         <span className="col-7">{listing.address}</span>
         <span className="col-3">{formatPrice(listing.price)}</span>
         {makeButtons()}

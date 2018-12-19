@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './ListingForm.scss';
 import authRequests from '../../helpers/data/authRequests';
+import listingsRequests from '../../helpers/data/listingsRequests';
 
 const defaultListing = {
   address: '',
@@ -18,6 +19,8 @@ const defaultListing = {
 class ListingForm extends React.Component {
   static propTypes = {
     onSubmit: PropTypes.func,
+    isEditing: PropTypes.bool,
+    editId: PropTypes.string,
   }
 
   state = {
@@ -56,11 +59,32 @@ class ListingForm extends React.Component {
     this.setState({ newListing: defaultListing }); // clears out input
   }
 
+  componentDidUpdate(prevProps) {
+    const { isEditing, editId } = this.props;
+    // if prevProps does not equal this.props and isEditing is true
+    if (prevProps !== this.props && isEditing) {
+      listingsRequests.getSingleListing(editId)
+        .then((listing) => {
+          this.setState({ newListing: listing.data });
+        })
+        .catch(err => console.error('error on componentDidUpdate', err));
+    }
+  }
+
   render() {
     const { newListing } = this.state;
+    const { isEditing } = this.props;
+
+    const title = () => {
+      if (isEditing) {
+        return <h2>Edit Listing:</h2>;
+      }
+      return <h2>Add New Listing:</h2>;
+    };
+
     return (
       <div className="listing-form col">
-        <h2>Add New Listing</h2>
+        {title()}
         <form onSubmit={this.formSubmit}>
           <div className="form-group">
             <label htmlFor="address">Address:</label>
