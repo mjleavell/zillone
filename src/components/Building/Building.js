@@ -5,7 +5,6 @@ import formatPrice from '../../helpers/formatPrice';
 import './Building.scss';
 
 class Building extends React.Component {
-
   static propTypes = { listing: listingProz.listingOptionalShape };
 
   render() {
@@ -19,7 +18,6 @@ class Building extends React.Component {
         </div>
       );
     }
-
     return (
       <div className="building col">
         <div className="row">
