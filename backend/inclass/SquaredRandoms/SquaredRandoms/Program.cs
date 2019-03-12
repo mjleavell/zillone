@@ -11,23 +11,33 @@ namespace SquaredRandoms
 
             Random random = new Random();
             var randomNumbers = new List<int>();
-            int counter = 0;
 
-            while (counter < 20)
+            for (int i = 0; i < 20; i++)
             {
                 int r = random.Next(50);
                 randomNumbers.Add(r);
                 Console.WriteLine(r);
-                counter++;
             }
-
-            Console.WriteLine(randomNumbers.ToString());
-            Console.ReadLine();
 
 
             // 2. With the resulting List, populate a new List that contains each number squared.
             //    For example, if the original list is `2, 5, 3, 15`, the final list will be `4, 25, 9, 225`.
-            // 3. Then remove any number that is odd from the list of squared numbers.        }
+            var squaredNumbers = new List<int>();
+            foreach (var number in randomNumbers)
+            {
+                int squaredNumber = number * number;
+                squaredNumbers.Add(squaredNumber);
+                Console.WriteLine(squaredNumber);
+
+                // 3. Then remove any number that is odd from the list of squared numbers
+                    if (squaredNumber % 2 != 0)
+                    {
+                        Console.WriteLine($"removed {squaredNumber}");
+                        squaredNumbers.Remove(squaredNumber);
+                    }
+            }
+
+            Console.ReadLine();         
         }
     }
 }
