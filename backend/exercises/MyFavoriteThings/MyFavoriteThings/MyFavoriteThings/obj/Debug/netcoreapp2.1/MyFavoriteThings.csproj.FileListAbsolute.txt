@@ -1,0 +1,11 @@
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\bin\Debug\netcoreapp2.1\MyFavoriteThings.deps.json
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\bin\Debug\netcoreapp2.1\MyFavoriteThings.runtimeconfig.json
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\bin\Debug\netcoreapp2.1\MyFavoriteThings.runtimeconfig.dev.json
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\bin\Debug\netcoreapp2.1\MyFavoriteThings.dll
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\bin\Debug\netcoreapp2.1\MyFavoriteThings.pdb
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.csprojAssemblyReference.cache
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.csproj.CoreCompileInputs.cache
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.AssemblyInfoInputs.cache
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.AssemblyInfo.cs
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.dll
+C:\Users\mleavell\workspace\backend\exercises\MyFavoriteThings\MyFavoriteThings\MyFavoriteThings\obj\Debug\netcoreapp2.1\MyFavoriteThings.pdb
