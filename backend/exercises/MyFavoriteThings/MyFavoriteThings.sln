@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFavoriteThings", "MyFavoriteThings\MyFavoriteThings.csproj", "{8C1DE3E0-F09B-4293-A809-15BC5C605253}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyFavoriteThings", "MyFavoriteThings\MyFavoriteThings.csproj", "{CFB298C5-2E8A-4024-A1C7-644AE60841E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8C1DE3E0-F09B-4293-A809-15BC5C605253}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C1DE3E0-F09B-4293-A809-15BC5C605253}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C1DE3E0-F09B-4293-A809-15BC5C605253}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C1DE3E0-F09B-4293-A809-15BC5C605253}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFB298C5-2E8A-4024-A1C7-644AE60841E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFB298C5-2E8A-4024-A1C7-644AE60841E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFB298C5-2E8A-4024-A1C7-644AE60841E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFB298C5-2E8A-4024-A1C7-644AE60841E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1466C951-CFCA-4F34-9EEB-E7196B7558D8}
+		SolutionGuid = {D0DE8691-6606-4FD7-B630-822C88FF2F46}
 	EndGlobalSection
 EndGlobal
